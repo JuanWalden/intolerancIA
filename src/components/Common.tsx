@@ -1,0 +1,3 @@
+export const TherapeuticCard = ({ title, children }: { title: string; children: React.ReactNode }) => <section className="card"><h3>{title}</h3>{children}</section>;
+export const RatingSlider = ({ label, value, onChange }: { label: string; value: number; onChange: (v: number) => void }) => <label>{label}: {value}<input type="range" min={0} max={10} value={value} onChange={(e) => onChange(Number(e.target.value))} /></label>;
+export const ReflectionTextarea = ({ label, value, onChange }: { label: string; value: string; onChange: (v: string) => void }) => <label>{label}<textarea value={value} onChange={(e) => onChange(e.target.value)} /></label>;
